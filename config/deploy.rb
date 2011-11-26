@@ -1,12 +1,10 @@
 set :application, "osmanov.me"
 set :repository,  "."
-set :deploy_to, "/home/ubuntu/#{application}"
+set :deploy_to, "/var/www/apps/#{application}"
 set :scm, :git
 set :user, "ubuntu"
 ssh_options[:keys] = [File.join(ENV["HOME"], ".ssh", "id_rsa")]
-set :location, "osmanov.me"
-role :app, location
-role :web, location
-role :db,  location, :primary => true
+server "osmanov.me", :web, :app, :db, :primary => true
 set :deploy_via, :copy
-set :stack, :passenger
+set :copy_exclude, [".git", "spec"]
+set :use_sudo, false

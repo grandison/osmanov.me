@@ -10,7 +10,7 @@
       </tr>
     </thead>
     <tbody>
-      <% Task.all.each do |task| %>
+      <% Task.order("created_at DESC").each do |task| %>
         <tr>
           <td><%= task.title %></td>
           <td><%= task.text %></td>

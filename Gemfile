@@ -21,6 +21,7 @@ gem 'capistrano'
 gem 'capistrano_colors'
 gem 'execjs'
 gem 'therubyracer'
+gem 'carrierwave'
 
 group :development do
   gem 'mongrel'

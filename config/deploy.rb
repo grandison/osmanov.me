@@ -3,7 +3,6 @@ require 'rvm/capistrano'
 require 'bundler/capistrano'
 set :application, "osmanov.me"
 set :rails_env, "production"
-set :rvm_ruby_string, 'ree'
 set :rvm_type, :user
 set :repository,  "."
 set :deploy_to, "/var/www/apps/#{application}"

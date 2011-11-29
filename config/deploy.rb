@@ -15,3 +15,4 @@ set :deploy_via, :copy
 set :copy_exclude, [".git", "spec"]
 set :use_sudo, false
 set :rvm_ruby, "ruby-1.9.2-p180"
+set :normalize_asset_timestamps, false

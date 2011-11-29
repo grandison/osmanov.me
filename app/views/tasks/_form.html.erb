@@ -1,0 +1,19 @@
+<%= form_for @task do |f| %>
+  <%= f.label :title %>
+  <div class="input">
+   <%= f.text_field :title %>
+  </div> 
+  <br />
+  <%= f.label :text %>
+  <div class="input">
+    <%= f.text_area :text %>
+  </div>
+  <%= f.label :status %>
+  <div class="input">
+    <%= f.text_field :status %>
+  </div> 
+  <br />
+  <div class="actions">
+    <%= f.submit "save", :class => "btn" %>
+  </div>  
+<% end -%>

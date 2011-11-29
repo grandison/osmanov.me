@@ -1,0 +1,26 @@
+<table class="tasks_table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Text</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% Task.all.each do |task| %>
+      <tr>
+        <td><%= task.title %></td>
+        <td><%= task.text %></td>
+        <td><%= task.status %></td>
+        <td><%= link_to "edit", edit_task_path(task) %> <%= link_to "delete", task_path(task), :method => "delete" %></td>
+      </tr>
+    <% end -%>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan='4'><%= link_to "Create new task", new_task_path %></td>
+    </tr>
+  </tfoot>
+</table>
+

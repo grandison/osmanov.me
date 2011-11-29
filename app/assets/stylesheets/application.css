@@ -5,3 +5,9 @@
  *= require_self
  *= require_tree . 
 */
+.tasks_table {
+  width: 600px;
+}
+.container {
+  margin-top: 15px;
+}

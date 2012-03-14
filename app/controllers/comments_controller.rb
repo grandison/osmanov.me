@@ -1,5 +1,4 @@
 class CommentsController < ApplicationController
-#  cache_sweeper :product_sweeper  
   
   def create
     comment = Comment.create(params[:comment])
